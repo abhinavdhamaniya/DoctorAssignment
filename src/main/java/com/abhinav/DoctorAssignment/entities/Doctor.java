@@ -2,10 +2,12 @@ package com.abhinav.DoctorAssignment.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 @Entity
 @NoArgsConstructor
+@Builder
 public class Doctor {
     @Id
     private int id;

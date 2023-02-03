@@ -12,8 +12,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
-import javax.print.Doc;
-
 import static org.hamcrest.MatcherAssert.assertThat;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -21,8 +19,6 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class CucumberMySteps {
 
     ResponseEntity<String> lastResponse;
-
-    RestTemplate restTemplate = new RestTemplate();
 
     @When("the client calls endpoint to get all doctors {string}")
     public void whenClientCallsGetAllDoctors(String url) {
@@ -43,7 +39,7 @@ public class CucumberMySteps {
     @When("the client calls endpoint to create doctor {string}")
     public void whenClientCallsCreateDoctor(String url) {
         try {
-            lastResponse = new RestTemplate().exchange("http://localhost:8081" + url, HttpMethod.POST,  new HttpEntity<>(new Doctor()), String.class);
+            lastResponse = new RestTemplate().exchange("http://localhost:8081" + url, HttpMethod.POST,  new HttpEntity<>(Doctor.builder().id(100).build()), String.class);
         } catch (HttpClientErrorException httpClientErrorException) {
             httpClientErrorException.printStackTrace();
         }

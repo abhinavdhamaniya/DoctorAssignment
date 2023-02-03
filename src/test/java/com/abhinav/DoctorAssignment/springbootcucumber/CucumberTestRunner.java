@@ -8,6 +8,6 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"src/test/resources/features"},
         plugin = {"pretty"},
-        glue = {"com.example.springbootcucumber.cucumberglue"})
+        glue = {"com.abhinav.DoctorAssignment.springbootcucumber.cucumberglue"})
 public class CucumberTestRunner {
 }
