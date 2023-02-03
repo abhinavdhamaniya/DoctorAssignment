@@ -15,6 +15,7 @@
 	<description>M4 b2 Assignment 1 submitted by Abhinav Dhamaniya</description>
 	<properties>
 		<java.version>17</java.version>
+		<cucumber.version>7.8.1</cucumber.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -40,6 +41,32 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-spring</artifactId>
+			<version>${cucumber.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>${cucumber.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>${cucumber.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.vintage</groupId>
+			<artifactId>junit-vintage-engine</artifactId>
+			<version>5.9.1</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
