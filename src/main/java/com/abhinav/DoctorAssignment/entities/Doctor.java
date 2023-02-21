@@ -1,9 +1,10 @@
 package com.abhinav.DoctorAssignment.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 @NoArgsConstructor

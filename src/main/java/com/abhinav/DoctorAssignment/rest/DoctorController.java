@@ -15,12 +15,12 @@ public class DoctorController {
     private DoctorDAO doctorDAO;
 
     @GetMapping("/list")
-    List<Doctor> list() {
+    public List<Doctor> list() {
         return doctorDAO.list();
     }
 
     @PostMapping("/create")
-    Doctor create(@RequestBody Doctor doctor) {
+    public Doctor create(@RequestBody Doctor doctor) {
         return doctorDAO.save(doctor);
     }
 }
